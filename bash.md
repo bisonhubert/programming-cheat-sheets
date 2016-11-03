@@ -1,4 +1,4 @@
-### Bash Cheat Sheet
+# Bash Cheat Sheet
 
 - [Xcode](#xcode)
 
