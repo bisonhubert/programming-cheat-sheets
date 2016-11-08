@@ -1,6 +1,9 @@
 # Git Cheat Sheet
 
-- [Branching](#branching)gs
+- [Branching](#branching)
+- [Rebasing](#rebasing)
+- [Undo Commits](#undo-commits)
+- [Ignoring Files Locally](#ignoring-files-locally)
 
 ### Branching
 BRANCHING OFF A BRANCH + PUSHING UP CHANGES
@@ -14,26 +17,31 @@ BRANCHING OFF A BRANCH + PUSHING UP CHANGES
 `$ git push origin my_feature`
 
 
-REBASING
+### Rebasing
 `$ git rebase -i <branch-merging-to>`
 * select which commits to squash
 `$ git push -f`
 
 
-UNDO COMMITS
+### Undo Commits
 * all commits
 `$ git reset HEAD~`
 * last 3 commits
 `$ git reset HEAD~3`
 
 
-IGNORING FILES LOCALLY
+### Ignoring Files Locally
+* ignore a local file
+```bash
 git update-index --assume-unchanged [<file>...]
+```
 
-
-SHOW IGNORED FILES
+* show all ignored files
+```bash
 git check-ignore *
+```
 
-
-Remove from ignored:
+* remove an ignored file from the ignored list
+```bash
 git update-index --no-assume-unchanged [<file>...]
+```
