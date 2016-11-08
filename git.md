@@ -28,17 +28,11 @@ UNDO COMMITS
 
 
 IGNORING FILES LOCALLY
-Have git ignore a file locally:
 git update-index --assume-unchanged [<file>...]
 
 
-Put this in ~/.gitignore:
-[alias]
-       ignored = !git ls-files -v | grep "^[[:lower:]]"
-
-
-Show ignored files:
-git ignored
+SHOW IGNORED FILES
+git check-ignore *
 
 
 Remove from ignored:
