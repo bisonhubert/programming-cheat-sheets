@@ -1,6 +1,6 @@
 # Git Cheat Sheet
 
-- [Branching](#branching)
+- [Branching](#branching)gs
 
 ### Branching
 BRANCHING OFF A BRANCH + PUSHING UP CHANGES
