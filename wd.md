@@ -14,3 +14,14 @@ driver.elementByXPath(emailField).then(element => {
   element.setImmediateValue(email)
 })
 ```
+
+### Grabbing Text from an Element w/ Promises
+```javascript
+return findTextOnButton("buttonText", driver).then(buttonText => {
+  return buttonText.text().then((text) => {
+    console.log('%%%%%%%%%%%% E L E M E N T %%%%%%%%%%%%%%%%%')
+    console.log('buttonText.text()', text)
+    return text
+  })
+})
+``

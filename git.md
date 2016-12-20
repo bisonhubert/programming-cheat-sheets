@@ -14,7 +14,6 @@ BRANCHING OFF A BRANCH + PUSHING UP CHANGES
 `$ git checkout testing`
 `$ git merge --no-ff my_feature`
 `$ git push origin testing`
-`$ git push origin my_feature`
 
 
 ### Rebasing
@@ -22,12 +21,27 @@ BRANCHING OFF A BRANCH + PUSHING UP CHANGES
 * select which commits to squash
 `$ git push -f`
 
+```bash
+rebase last three commits into one
+git checkout feature
+git rebase -i HEAD~3
+$
+```
+
+
+
 
 ### Undo Commits
 * all commits
 `$ git reset HEAD~`
 * last 3 commits
 `$ git reset HEAD~3`
+* by specific commit
+```bash
+$ git log
+// check which commit is one prior to a merge
+$ git reset --hard commit_sha
+```
 
 
 ### Ignoring Files Locally
@@ -45,3 +59,4 @@ git check-ignore *
 ```bash
 git update-index --no-assume-unchanged [<file>...]
 ```
+
