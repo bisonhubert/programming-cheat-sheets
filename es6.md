@@ -1,11 +1,12 @@
 # ES6 Cheat Sheet
 
+- [New Function Functions](#new-function-syntax)
 - [Helper Functions](#helper-funcitons)
 - [Rest & Spread](#rest-and-spread)
 - [Destructuring](#destructuring)
 - [Intro to Classes & Inheritance](#intro-to-classes-&-inheritance)
 
-### Helper Functions
+### New Function Syntax
 ```javascript
 // ES6 fat arrow function
 const add = (a, b) => a + b;
@@ -23,6 +24,13 @@ multiply(1, 2);
 const divide = (a, b) => a / b;
 divide(1, 2);
 ```
+
+
+
+### Helper Functions
+
+
+
 
 ### Rest and Spread
 ```javascript
