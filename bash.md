@@ -112,8 +112,15 @@ $ android delete avd -n <name>
 ```
 
 ```bash
+install android-21 google abi
+echo y | android update sdk --no-ui --all --filter addon-google_apis-google-21
+echo y | android update sdk --no-ui --all --filter sys-img-armeabi-v7a-google_apis-21
+$
+```
+
+```bash
 create new emulator
-$ echo no | android create avd -n <name> -t <targetID> --abi <api> -c <SD size>
+$ echo no | android create avd --name "TTTest" --target "android-22" --abi "google_apis/x86" -s "1440x2560" --device "Nexus 6" -c 128M
 ```
 
 ```bash
@@ -121,18 +128,12 @@ list targets
 $ android list targets
 ```
 
-CREATING
+CREATE
+echo no | android "create" "avd" "--force" "--name" "test" "--target" "android-21" "--abi" "armeabi-v7a"
 
-BITRISE default
-echo no | android create avd -n test -t android-22 --abi google_apis/x86 -s 768x1280
+START
+emulator -avd test -skin 768x1280 -no-boot-anim -no-audio
 
-echo no | android create avd -n test -t android-24 --abi default/armeabi-v7a -c 64M -s 768x1280
-
-TOO BIG
-echo no | android create avd -n test -t android-24 --abi default/armeabi-v7a -c 64M -s 1440x2560
-
-API 21
-echo no | android create avd -n test -t android-21 --abi default/armeabi-v7a -c 64M -s 1440x2560
 
 API 24 from Google
 set -ex
